@@ -2,6 +2,8 @@
 
 $(document).ready(function() {
   $("#groceryList").submit(function(event) {
+    //$("#formButton").click(function(){
+      //$("#groceryList").toggle();
     event.preventDefault();
 
     const items1 = $("input#item1").val();
@@ -14,6 +16,12 @@ $(document).ready(function() {
     groceries.forEach(function(food) {
       groceries.sort();
     })
-    console.log(groceries);
-  })
-})
+
+    const upperCaseGroceries = groceries.map(groceries => groceries.toUpperCase());
+
+    console.log(upperCaseGroceries);
+    $('#list').show();
+    $('#groceryList').hide();
+    });
+  });
+});
